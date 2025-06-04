@@ -1,0 +1,469 @@
+/* ================================
+   🎨 Modo Escuro: Cores principais
+================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --azul-escuro: #1A252F;
+    --azul-claro: #5DADE2;
+    --laranja: #FF6F61;
+    --cinza-claro: #34495E;
+    --cinza: #7D7D7D;
+    --branco: #FFFFFF;
+  }
+}
+
+/* ================================
+   🔧 Reset e base
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+}
+
+/* ================================
+   ✍️ Tipografia Padrão
+================================= */
+h1, h2, h3 {
+  color: var(--branco);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 38px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+p {
+  color: var(--branco);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 16px 0;
+  text-align: justify;
+}
+
+p span {
+    color: var(--laranja)
+}
+
+h1 span,
+h2 span,
+h3 span {
+  color: var(--azul-claro);
+}
+
+/* ================================
+   📐 Layout
+================================= */
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ================================
+   🟦 Botões
+================================= */
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--azul-claro);
+  border-radius: 30px;
+}
+
+button:hover, form .btn-enviar input:hover {
+  box-shadow: 0 0 8px var(--azul-claro);
+  transform: scale(1.05);
+}
+
+/* ================================
+   ⛳ Cabeçalho
+================================= */
+header {
+  padding: 40px 4%;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+header a {
+  color: var(--cinza-claro);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+header a:hover {
+  color: var(--cinza);
+  transform: scale(1.05);
+}
+
+/* ================================
+   🧭 Topo do site
+================================= */
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site .txt-topo-site p {
+  margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% { top: 0; }
+  100% { top: 30px; }
+}
+
+/* ================================
+   💡 Especialidades
+================================= */
+section.especialidades {
+  margin-top: 80px;
+  padding: 40px 4%;
+}
+
+.especialidades p {
+  text-align: start; /* ou left */
+}
+
+section.especialidades .flex {
+  gap: 60px;
+}
+
+.especialidades .especialidades-box {
+  color: var(--branco);
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 45px;
+  transition: 0.2s;
+}
+
+.especialidades .especialidades-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--cinza);
+}
+
+/* .especialidades .especialidades-box i {
+  font-size: 70px;
+  color: var(--azul-claro);
+} */
+
+.especialidades .especialidades-box img {
+  width: 60px;
+  border: solid 2px var(--azul-claro);
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.especialidades .especialidades-box h3 {
+ color: var(--azul-claro); 
+}
+
+/* ================================
+   👤 Sobre
+================================= */
+section.sobre {
+  padding: 80px 4%;
+}
+
+section.sobre .flex {
+  align-items: center;
+  gap: 60px;
+}
+
+section.sobre .flex .img-sobre{
+    color: var(--branco);
+    border-radius: 20px;
+    transition: .2s;
+}
+
+section.sobre .flex .img-sobre:hover{
+    transform: scale(1.05);
+}
+
+.sobre .txt-sobre {
+  color: var(--branco);
+}
+
+.sobre .txt-sobre h2 {
+    text-align: start;
+}
+
+.sobre .txt-sobre h2 span {
+  display: block;
+}
+
+.btn-social button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--azul-claro);
+  font-size: 22px;
+  margin: 0 5px;
+}
+
+/* ================================
+   📚 Portfólio
+================================= */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: transform 0.5s ease, background-position 8s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a252fa8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--branco);
+    opacity: 0;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ================================
+   📚 Estilo do fomulário de contato
+================================= */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: var(--cinza-claro);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: var(--branco);
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 500px;
+}
+
+form .btn-enviar {
+    margin-top: 30px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 150px;
+    background-color: var(--azul-claro);
+    color: var(--cinza-claro);
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ================================
+   📚 Estilo do rodapé
+================================= */
+footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid var(--azul-claro); 
+}
+
+footer .line-footer p i {
+    color: var(--azul-claro);
+    font-size: 20px;
+}
+
+footer .line-footer p a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+/* ================================
+   📚 Resposivo
+================================= */
+@media screen and (max-width: 1020px) {
+    /* Classes Gerais */
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    /* Cabeçalho */
+    .menu-desktop, .btn-contato {
+      display: none;
+    }
+
+    /* Topo do site */
+    section.topo-do-site .flex {
+        gap: 60px;
+    }
+
+    section.topo-do-site {
+      padding: 10px 4%;
+    }
+
+    .topo-do-site h1 {
+      font-size: 32px;
+    }
+
+    .topo-do-site .img-topo-site img {
+      width: 100%;
+    }
+
+    /* Especialidades */
+    section.especialidades {
+        padding: 20px 4%;
+    }
+
+    /* Sobre */
+    .img-sobre img {
+      width: 100%;
+    }
+    section.sobre {
+      padding: 80px 5%;
+    }
+
+    .sobre .txt-sobre h2 {
+      font-size: 34px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    .btn-social {
+      text-align: center;
+    }
+
+    /* Portfólio */
+    section.portfolio {
+      padding: 80px 4%;
+    }
+
+    .img-port {
+      width: 100%px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    section.portfolio .flex {
+        gap: 60px;
+    }
+
+    /* Rodapé */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .line-footer.borda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+}
