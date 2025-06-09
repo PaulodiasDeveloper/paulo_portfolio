@@ -1,3 +1,4 @@
+
 /* ================================
    🎨 Modo Escuro: Cores principais
 ================================= */
@@ -15,6 +16,7 @@
 /* ================================
    🔧 Reset e base
 ================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +28,8 @@ body {
   background-color: #000;
   height: 100vh;
 }
+
+
 
 /* ================================
    ✍️ Tipografia Padrão
@@ -449,6 +453,33 @@ footer .line-footer p a {
     color: var(--branco);
     text-decoration: none;
 }
+
+
+/* Botão flutuante */
+
+#btnTopo {
+    position: fixed; /* fixo na tela */
+    bottom: 0;       /* colado no rodapé */
+    right: 0;        /* colado na direita */
+    margin: 10px;    /* margem pra não encostar 100% na borda */
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 10px 0 0 0; /* cantos arredondados só no topo-esquerdo */
+    font-size: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+
+  #btnTopo:hover {
+    opacity: 1;
+    background-color: #333;
+  }
+
 
 /* ================================
    📚 Resposivo
