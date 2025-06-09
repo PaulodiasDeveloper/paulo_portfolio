@@ -22,9 +22,16 @@ const menuLinks = document.querySelectorAll('#menu-mobile nav a, .menu-desktop a
 
 menuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // Evita scroll instantâneo do href
+        const href = link.getAttribute('href');
+        
+        // Se for um link externo (começa com http), deixa funcionar normalmente
+        if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
+            return; // Não faz preventDefault, deixa o link funcionar
+        }
+        
+        e.preventDefault(); // Só previne para links internos
 
-        const targetId = link.getAttribute('href');
+        const targetId = href;
 
         // Se for o link para o topo (href="#"), rola para o topo
         if (targetId === '#' || targetId === '') {
