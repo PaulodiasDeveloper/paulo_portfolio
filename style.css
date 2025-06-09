@@ -465,7 +465,7 @@ footer .line-footer p a {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #555;
+    background-color: #000000;
     color: white;
     cursor: pointer;
     padding: 12px 16px;
@@ -477,14 +477,37 @@ footer .line-footer p a {
 
   #btnTopo:hover {
     opacity: 1;
-    background-color: #333;
+    background-color: #000000;
   }
+
+  .menu-mobile {
+    display: none;
+}
+
+.btn-abrir-menu {
+    display: none;
+}
+
 
 
 /* ================================
    📚 Resposivo
 ================================= */
 @media screen and (max-width: 1020px) {
+  /* Cabeçalho */.menu-mobile {
+        display: block;
+    }
+
+    .btn-abrir-menu {
+        display: block;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+
+
     /* Classes Gerais */
     .flex {
         flex-direction: column;

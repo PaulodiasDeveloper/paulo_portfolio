@@ -18,7 +18,7 @@ overlayMenu.addEventListener('click', () => {
     overlayMenu.classList.remove('active');
 });
 
-const menuLinks = document.querySelectorAll('#menu-mobile nav a, .menu-desktop a');
+const menuLinks = document.querySelectorAll('#menu-mobile nav a, .menu-desktop a, .btn-contato a');
 
 menuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
