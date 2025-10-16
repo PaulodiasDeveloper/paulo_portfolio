@@ -371,6 +371,7 @@ section.portfolio .flex {
     font-weight: 600;
     color: var(--branco);
     opacity: 0;
+    text-align: center;
 }
 
 .overlay:hover {
