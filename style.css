@@ -1,5 +1,5 @@
 /* ================================
-   🎨 Variáveis de cores (PADRÃO – Modo Claro)
+   🎨 Variáveis de cores (Modo Claro)
 ================================= */
 :root {
   --azul-escuro: #1A252F;
@@ -26,7 +26,7 @@
 }
 
 /* ================================
-   🔧 Reset e base
+   🔧 Reset
 ================================= */
 * {
   margin: 0;
@@ -47,12 +47,11 @@ h1, h2, h3 {
   color: var(--branco);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 16px;
 }
 
 h1 { font-size: 42px; }
 h2 { font-size: 38px; text-align: center; }
-h3 { font-size: 28px; }
+h3 { font-size: 26px; }
 
 p {
   color: var(--branco);
@@ -64,7 +63,9 @@ p {
 
 p span { color: var(--laranja); }
 
-h1 span, h2 span, h3 span {
+h1 span,
+h2 span,
+h3 span {
   color: var(--azul-claro);
 }
 
@@ -125,16 +126,10 @@ header nav ul {
 header a {
   color: var(--cinza);
   text-decoration: none;
-  transition: 0.2s;
 }
 
 header nav.menu-desktop a:hover {
   color: var(--azul-claro);
-}
-
-header nav.menu-desktop ul li {
-  display: inline-block;
-  padding: 0 40px;
 }
 
 /* ================================
@@ -164,7 +159,7 @@ header nav.menu-desktop ul li {
   z-index: 99999;
   width: 0%;
   overflow: hidden;
-  transition: .5s;
+  transition: .4s;
   display: none;
 }
 
@@ -176,32 +171,17 @@ header nav.menu-desktop ul li {
   display: block;
 }
 
-.menu-mobile .btn-fechar {
-  padding: 20px 5%;
-}
-
-.menu-mobile .btn-fechar i {
-  color: var(--azul-claro);
-  font-size: 20px;
-}
-
 .menu-mobile nav ul {
-  text-align: right;
   display: flex;
   flex-direction: column;
+  text-align: right;
 }
 
 .menu-mobile nav ul li a {
-  color: var(--branco);
+  color: #fff;
   font-size: 20px;
-  font-weight: 300;
-  padding: 10px 8%;
+  padding: 12px 8%;
   display: block;
-}
-
-.menu-mobile nav ul li a:hover {
-  background-color: var(--azul-claro);
-  color: var(--azul-escuro);
 }
 
 /* ================================
@@ -214,14 +194,10 @@ section.topo-do-site {
 section.topo-do-site .flex {
   align-items: center;
   justify-content: center;
-  gap: 90px;
+  gap: 80px;
 }
 
-.topo-do-site .txt-topo-site p {
-  margin: 40px 0;
-}
-
-.topo-do-site .img-topo-site img {
+.topo-do-site img {
   animation: flutuar 2s ease-in-out infinite alternate;
 }
 
@@ -234,8 +210,8 @@ section.topo-do-site .flex {
    💡 Especialidades
 ================================= */
 section.especialidades {
-  margin-top: 80px;
   padding: 40px 4%;
+  margin-top: 80px;
 }
 
 section.especialidades .flex {
@@ -245,7 +221,7 @@ section.especialidades .flex {
 .especialidades-box {
   padding: 40px;
   border-radius: 20px;
-  transition: 0.2s;
+  transition: .2s;
 }
 
 .especialidades-box:hover {
@@ -256,8 +232,7 @@ section.especialidades .flex {
 .especialidades-box img {
   width: 60px;
   border: 2px solid var(--azul-claro);
-  border-radius: 5px;
-  margin: 15px 0;
+  border-radius: 6px;
 }
 
 .especialidades-box h3 {
@@ -277,44 +252,35 @@ section.sobre .flex {
 }
 
 .img-sobre img {
+  width: 100%;
   border-radius: 20px;
-  transition: .2s;
-}
-
-.img-sobre img:hover {
-  transform: scale(1.05);
-}
-
-.btn-social button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--azul-claro);
-  font-size: 22px;
-  margin: 0 5px;
 }
 
 /* ================================
-   📚 Portfólio
+   📚 Portfólio (CORRIGIDO)
 ================================= */
 section.portfolio {
   padding: 80px 4%;
-  box-shadow: 0 0 40px 10px rgba(0,0,0,0.1);
+  display: block;
 }
 
 section.portfolio .flex {
+  display: flex;
   justify-content: space-around;
   margin-top: 60px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .img-port {
   width: 360px;
   height: 460px;
   background-size: cover;
-  background-position: top;
-  border-radius: 10px;
+  background-position: center;
+  border-radius: 12px;
   position: relative;
-  transition: transform .5s;
+  cursor: pointer;
+  transition: transform .4s;
 }
 
 .img-port:hover {
@@ -324,16 +290,16 @@ section.portfolio .flex {
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(26,37,47,0.75);
+  background-color: rgba(26,37,47,0.8);
+  color: #fff;
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  font-weight: 600;
-  color: #fff;
-  opacity: 0;
-  border-radius: 10px;
   text-align: center;
+  opacity: 0;
+  transition: .3s;
+  border-radius: 12px;
 }
 
 .img-port:hover .overlay {
@@ -348,23 +314,20 @@ section.formulario {
 }
 
 form {
-  width: 500px;
-  margin: 40px auto 0;
+  max-width: 500px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-form input, form textarea {
-  background-color: #2c2c2c;
-  border: none;
+form input,
+form textarea {
   padding: 15px;
   border-radius: 15px;
+  border: none;
+  background-color: #2c2c2c;
   color: #fff;
-}
-
-form .btn-enviar {
-  text-align: center;
 }
 
 /* ================================
@@ -384,20 +347,35 @@ footer .flex {
 }
 
 /* ================================
-   📱 Responsivo
+   📱 RESPONSIVO (MOBILE)
 ================================= */
 @media screen and (max-width: 1020px) {
+
+  /* Header */
+  header .menu-desktop,
+  header .btn-contato {
+    display: none;
+  }
+
   .menu-mobile,
   .btn-abrir-menu {
     display: block;
   }
 
-  .menu-desktop,
-  .btn-contato {
-    display: none;
+  /* Layout geral */
+  .flex {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .flex {
+  /* Topo */
+  section.topo-do-site .flex {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  /* Portfólio */
+  section.portfolio .flex {
     flex-direction: column;
     align-items: center;
   }
@@ -405,5 +383,17 @@ footer .flex {
   .img-port {
     width: 100%;
     max-width: 360px;
+    height: 380px;
+  }
+
+  .overlay {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  /* Rodapé */
+  footer .flex {
+    flex-direction: column;
+    gap: 30px;
   }
 }
