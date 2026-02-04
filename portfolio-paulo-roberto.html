@@ -804,10 +804,11 @@
             button.disabled = true;
 
             try {
-                // Create a link to download the original PDF
+                // Create a link to download the PDF
                 const link = document.createElement('a');
-                link.href = 'Paulo_Roberto.pdf';
+                link.href = './Paulo_Roberto.pdf'; // Caminho relativo
                 link.download = 'Paulo_Roberto_CV.pdf';
+                link.target = '_blank'; // Abre em nova aba como fallback
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
