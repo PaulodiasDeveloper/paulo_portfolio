@@ -546,9 +546,9 @@
                         <a href="https://github.com/PaulodiasDeveloper" target="_blank" class="contact-link">
                             <span>gh</span> GitHub
                         </a>
-                        <button onclick="downloadPDF()" class="contact-link" style="border: none; cursor: pointer;">
+                        <a href="Paulo_Roberto.pdf" class="contact-link" download="Paulo_Roberto_CV.pdf">
                             <span>📄</span> Baixar CV PDF
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="stats-block">
@@ -796,39 +796,6 @@
     </div>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Download PDF function
-        async function downloadPDF() {
-            const button = event.target.closest('button');
-            const originalText = button.innerHTML;
-            button.innerHTML = '<span>⏳</span> Gerando PDF...';
-            button.disabled = true;
-
-            try {
-                // Create a link to download the PDF from GitHub
-                const link = document.createElement('a');
-                // Use o link raw do GitHub para seu PDF
-                link.href = 'https://raw.githubusercontent.com/PaulodiasDeveloper/paulo_portfolio/main/Paulo_Roberto.pdf';
-                link.download = 'Paulo_Roberto.pdf';
-                link.target = '_blank';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-
-                button.innerHTML = '<span>✓</span> Download iniciado!';
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                }, 2000);
-            } catch (error) {
-                console.error('Erro ao baixar PDF:', error);
-                button.innerHTML = '<span>✗</span> Erro no download';
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                }, 2000);
-            }
-        }
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
