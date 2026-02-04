@@ -804,11 +804,12 @@
             button.disabled = true;
 
             try {
-                // Create a link to download the PDF
+                // Create a link to download the PDF from GitHub
                 const link = document.createElement('a');
-                link.href = './Paulo_Roberto.pdf'; // Caminho relativo
+                // Use o link raw do GitHub para seu PDF
+                link.href = 'https://raw.githubusercontent.com/PaulodiasDeveloper/portfolio_datascience/main/Paulo_Roberto.pdf';
                 link.download = 'Paulo_Roberto_CV.pdf';
-                link.target = '_blank'; // Abre em nova aba como fallback
+                link.target = '_blank';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
