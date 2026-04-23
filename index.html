@@ -308,10 +308,10 @@
         .timeline-header {
             display: flex;
             justify-content: space-between;
-            align-items: start;
+            align-items: flex-start; /* Mantém o alinhamento no topo */
             margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
+            flex-wrap: wrap; /* Importante para permitir que o cargo desça */
+            gap: 0.5rem;
         }
 
         .company-name {
@@ -320,6 +320,16 @@
             color: var(--accent);
             font-weight: 700;
         }
+
+        .company-func {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem; /* Tamanho ajustado */
+            color: var(--accent-dim); /* Cor levemente diferente para contraste, opcional */
+            font-weight: 400;
+            display: block;    /* FORÇA A QUEBRA DE LINHA */
+            width: 100%;       /* Ocupa toda a largura para empurrar o período */
+            margin-top: 0.5rem; /* Cria um respiro entre o nome da empresa e o cargo */
+        }     
 
         .period {
             font-family: 'Space Mono', monospace;
@@ -640,7 +650,8 @@
 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <h3 class="company-name">Tecservice Engenharia e Consultoria | SUB/IOPP/GIOP/PCIOP</h3>
+                        <h3 class="company-name">Tecservice Engenharia e Consultoria</h3>
+                        <h4 class="company-func">Engenheiro Cientista de Dados | SUB/IOPP/GIOP/PCIOP</h4>
                         <span class="period">Mar/2026 - Atual</span>
                     </div>
                     <ul class="responsibilities">
@@ -660,7 +671,8 @@
 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <h3 class="company-name">Solutic Group | LOEP/LTA/LRR/OP-RES</h3>
+                        <h3 class="company-name">Solutic Group</h3>
+                        <h3 class="company-func">LOEP/LTA/LRR/OP-RES</h3>
                         <span class="period">Set/2022 - Fev/2026</span>
                     </div>
                     <ul class="responsibilities">
